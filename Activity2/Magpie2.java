@@ -30,7 +30,7 @@ public class Magpie2
 	 */
 	public String getResponse(String statement)
 	{
-		String response = "";
+		String response;
 		if (statement.indexOf("no") >= 0)
 		{
 			response = "Why so negative?";
@@ -41,6 +41,14 @@ public class Magpie2
 				|| statement.indexOf("brother") >= 0)
 		{
 			response = "Tell me more about your family.";
+		}
+		else if(statement.indexOf("dog") >= 0 || statement.indexOf("cat") >= 0)
+		{
+			response = "Tell me more about your pets";
+		}
+		else if(statement.contains("Mr.") || statement.contains("Mrs.") || statement.contains("Ms."))
+		{
+			response = "He sounds like a good teacher";
 		}
 		else
 		{
